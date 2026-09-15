@@ -32,9 +32,9 @@ import {
   getShippingCost,
   generateOrderNumber,
 } from "@/lib/utils";
-import type { DeliveryMethod, PaymentMethod } from "@/types";
+import type { DeliveryMethod } from "@/types";
 
-type CheckoutPaymentMethod = PaymentMethod;
+type CheckoutPaymentMethod = "easypaisa" | "cod";
 
 const deliveryOptions: {
   value: DeliveryMethod;
