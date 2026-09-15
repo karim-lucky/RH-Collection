@@ -125,7 +125,7 @@ export default function LoginForm() {
         </div>
       </div>
 
-      <Button
+      {/* <Button
         type="button"
         variant="outline"
         className="w-full"
@@ -155,7 +155,7 @@ export default function LoginForm() {
           </svg>
         )}
         Continue with Google
-      </Button>
+      </Button> */}
 
       <p className="text-center text-sm text-muted-foreground">
         Don&apos;t have an account?{" "}
