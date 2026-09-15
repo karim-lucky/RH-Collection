@@ -1,4 +1,4 @@
-# Rehmat Watches — Luxury Watch E-commerce
+# RH-Collection Watches — Luxury Watch E-commerce
 
 A production-ready luxury watch e-commerce platform built with Next.js 15+, featuring a premium black & gold design, full admin dashboard, Stripe payments, and WhatsApp ordering.
 
