@@ -33,7 +33,7 @@ const OrderSchema = new Schema(
     },
     paymentMethod: {
       type: String,
-      enum: ["easypaisa", "cod", "bank_transfer"],
+      enum: ["easypaisa", "cod"],
       required: true,
     },
     status: {
@@ -47,7 +47,6 @@ const OrderSchema = new Schema(
     discount: { type: Number, default: 0 },
     total: { type: Number, required: true },
     couponCode: String,
-    stripePaymentId: String,
     trackingNumber: String,
   },
   { timestamps: true }

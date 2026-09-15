@@ -1,6 +1,6 @@
 # RH-Collection Watches — Luxury Watch E-commerce
 
-A production-ready luxury watch e-commerce platform built with Next.js 15+, featuring a premium black & gold design, full admin dashboard, Stripe payments, and WhatsApp ordering.
+A production-ready luxury watch e-commerce platform built with Next.js 15+, featuring a premium black & gold design, full admin dashboard, EasyPaisa and cash on delivery payments, and WhatsApp ordering.
 
 ## Tech Stack
 
@@ -10,7 +10,7 @@ A production-ready luxury watch e-commerce platform built with Next.js 15+, feat
 - **UI:** Shadcn UI + Radix UI
 - **Database:** MongoDB + Mongoose
 - **Auth:** NextAuth v5 (Credentials + Google)
-- **Payments:** Stripe
+- **Payments:** EasyPaisa and Cash on Delivery
 - **Images:** Cloudinary
 - **Animations:** Framer Motion
 
@@ -56,7 +56,7 @@ Open [http://localhost:3000](http://localhost:3000)
 - Full-screen hero slider with luxury banners
 - Product catalog with filters, sorting, search & pagination
 - Product detail with image zoom, specs, reviews
-- Shopping cart & checkout (Stripe, COD, Bank Transfer)
+- Shopping cart & checkout (EasyPaisa and COD)
 - WhatsApp ordering integration
 - Wishlist & recently viewed
 - Customer dashboard (orders, profile, addresses)
@@ -89,7 +89,7 @@ src/
 │   ├── admin/           # Admin components
 │   └── layout/          # Header, Footer, WhatsApp
 ├── contexts/            # Cart & Wishlist state
-├── lib/                 # Utilities, auth, stripe, etc.
+├── lib/                 # Utilities, auth, etc.
 ├── models/              # Mongoose schemas
 └── types/               # TypeScript types
 ```
@@ -102,8 +102,6 @@ src/
 | `AUTH_SECRET` | NextAuth secret key |
 | `AUTH_GOOGLE_ID` | Google OAuth client ID |
 | `AUTH_GOOGLE_SECRET` | Google OAuth secret |
-| `STRIPE_SECRET_KEY` | Stripe secret key |
-| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key |
 | `CLOUDINARY_*` | Cloudinary credentials |
 | `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp business number |
 

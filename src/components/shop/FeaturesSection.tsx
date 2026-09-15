@@ -14,7 +14,7 @@ const features = [
   {
     icon: CreditCard,
     title: "Secure Payments",
-    description: "Stripe, COD & bank transfer",
+    description: "EasyPaisa & Cash on Delivery",
   },
   {
     icon: Shield,

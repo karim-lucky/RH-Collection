@@ -80,6 +80,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (paymentMethod !== "easypaisa" && paymentMethod !== "cod") {
+      return NextResponse.json(
+        { error: "Payment method must be EasyPaisa or Cash on Delivery" },
+        { status: 400 }
+      );
+    }
+
     await connectDB();
 
     const orderItems = [];

@@ -15,7 +15,7 @@ export type OrderStatus =
   | "shipped"
   | "delivered"
   | "cancelled";
-export type PaymentMethod = " easypaisa" | "cod" | "bank_transfer" | "stripe";
+export type PaymentMethod = "easypaisa" | "cod";
 export type DeliveryMethod = "standard" | "express";
 
 export interface ProductSpecs {
@@ -103,7 +103,6 @@ export interface Order {
   discount: number;
   total: number;
   couponCode?: string;
-  stripePaymentId?: string;
   trackingNumber?: string;
   createdAt: string;
   updatedAt: string;
