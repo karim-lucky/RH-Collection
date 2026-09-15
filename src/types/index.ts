@@ -15,7 +15,7 @@ export type OrderStatus =
   | "shipped"
   | "delivered"
   | "cancelled";
-export type PaymentMethod = "easypaisa" | "cod" | "bank_transfer";
+export type PaymentMethod = " easypaisa" | "cod" | "bank_transfer" | "stripe";
 export type DeliveryMethod = "standard" | "express";
 
 export interface ProductSpecs {
