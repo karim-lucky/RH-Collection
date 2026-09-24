@@ -11,39 +11,7 @@ import type {
 import { demoBanners, demoProducts, demoReviews } from "./demo-data";
 
 export const demoOrders: Order[] = [
-  {
-    _id: "o1",
-    orderNumber: "RW-M1ABC-XY12",
-    userId: "u1",
-    items: [
-      {
-        productId: "1",
-        name: "Royal Chronograph Gold",
-        image: demoProducts[0].images[0],
-        price: 74900,
-        quantity: 1,
-        color: "Gold",
-      },
-    ],
-    customer: { name: "Ahmed Khan", email: "ahmed@example.com", phone: "+92 300 1234567" },
-    shippingAddress: {
-      country: "Pakistan",
-      province: "Punjab",
-      city: "Lahore",
-      address: "123 Mall Road",
-      postalCode: "54000",
-    },
-    deliveryMethod: "express",
-    paymentMethod: "easypaisa",
-    status: "delivered",
-    subtotal: 74900,
-    shipping: 1500,
-    tax: 3745,
-    discount: 0,
-    total: 80145,
-    createdAt: "2026-05-10T10:00:00.000Z",
-    updatedAt: "2026-05-14T14:00:00.000Z",
-  },
+  
   {
     _id: "o2",
     orderNumber: "RW-M2DEF-AB34",
