@@ -25,8 +25,7 @@ export const demoOrders: Order[] = [
         color: "Gold",
       },
     ],
-    customer: { name: "Ahmed Khan", email: "ahmed@example.com", phone: "+03365884894" },
-    shippingAddress: {
+    customer: { name: "Ahmed Khan", email: "ahmed@example.com", phone: "+    shippingAddress: {
       country: "Pakistan",
       province: "Punjab",
       city: "Lahore",

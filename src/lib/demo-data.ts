@@ -339,8 +339,7 @@ export const demoBanners = [
   order: 4,
 },
 ];
-
-export const demoReviews = [
+  export const demoReviews = [
   {
     _id: "r1",
     productId: "1",
