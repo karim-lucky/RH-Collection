@@ -167,23 +167,95 @@ export function Header() {
           mobileOpen ? "max-h-96" : "max-h-0"
         )}
       >
-        <nav className="flex flex-col gap-1 p-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold"
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          {!session && (
-            <Link href="/login" className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold">
-              Sign In
-            </Link>
-          )}
-        </nav>
+      ```tsx
+<nav className="flex flex-col gap-1 p-4">
+  {navLinks.map((link) => (
+    <Link
+      key={link.href}
+      href={link.href}
+      className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold"
+      onClick={() => setMobileOpen(false)}
+    >
+      {link.label}
+    </Link>
+  ))}
+
+  {session ? (
+    <>
+      {/* Logged-in user */}
+      <div className="my-2 border-t border-white/10 pt-3">
+        <div className="flex items-center gap-3 px-4 py-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-black">
+            <User className="h-5 w-5" />
+          </div>
+
+          <div className="min-w-0">
+            <p className="text-sm font-semibold truncate">
+              {session.user?.name || "User"}
+            </p>
+            <p className="text-xs text-foreground/60 truncate">
+              {session.user?.email}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <Link
+        href="/dashboard"
+        className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold"
+        onClick={() => setMobileOpen(false)}
+      >
+        Dashboard
+      </Link>
+
+      <Link
+        href="/dashboard/orders"
+        className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold"
+        onClick={() => setMobileOpen(false)}
+      >
+        My Orders
+      </Link>
+
+      <Link
+        href="/dashboard/profile"
+        className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold"
+        onClick={() => setMobileOpen(false)}
+      >
+        Profile
+      </Link>
+
+      {session.user?.role === "admin" && (
+        <Link
+          href="/admin"
+          className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold"
+          onClick={() => setMobileOpen(false)}
+        >
+          Admin Panel
+        </Link>
+      )}
+
+      <button
+        onClick={async () => {
+          setMobileOpen(false);
+          await signOut({ callbackUrl: "/" });
+        }}
+        className="mt-1 w-full rounded-lg px-4 py-3 text-left text-sm font-medium text-red-500 hover:bg-red-500/10"
+      >
+        Sign Out
+      </button>
+    </>
+  ) : (
+    <Link
+      href="/login"
+      className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-gold/10 hover:text-gold"
+      onClick={() => setMobileOpen(false)}
+    >
+      Sign In
+    </Link>
+  )}
+</nav>
+```
+
       </div>
     </header>
   );
